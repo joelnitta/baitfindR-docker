@@ -1,0 +1,4 @@
+.Rprofile
+packrat/*
+!packrat/packrat.lock
+
