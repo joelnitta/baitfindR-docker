@@ -18,7 +18,6 @@ RUN apt-get update \
 		ncbi-blast+=2.6.0-1 \
 		phyutility=2.7.3-1 \
 		python-biopython \
-		raxml=8.2.9+dfsg-1+b1 \
 		qpdf \
 		t-coffee=11.00.8cbe486-5 \
 		transdecoder=3.0.1+dfsg-1 \
@@ -58,14 +57,25 @@ RUN git clone https://bitbucket.org/yangya/phylogenomic_dataset_construction.git
 
 ENV APPS_HOME=/apps
 RUN mkdir $APPS_HOME
-WORKDIR $APPS_HOME
 
 ### PASTA ###
+WORKDIR $APPS_HOME
 ENV APP_NAME=pasta
 ENV DEST=$APPS_HOME/$APP_NAME
 RUN git clone https://github.com/smirarab/$APP_NAME.git \
 	&& git clone https://github.com/smirarab/sate-tools-linux.git
-WORKDIR $APPS_HOME/$APP_NAME
+WORKDIR $DEST
 RUN python setup.py develop
+
+### RAxML ###
+WORKDIR $APPS_HOME
+ENV APP_NAME=standard-RAxML-8.2.12
+ENV DEST=$APPS_HOME/$APP_NAME
+RUN wget https://github.com/stamatak/standard-RAxML/archive/v8.2.12.zip \
+	&& unzip v8.2.12.zip
+WORKDIR $DEST
+RUN make -f Makefile.AVX.PTHREADS.gcc \
+  && cp raxmlHPC-PTHREADS-AVX /usr/bin/raxml \
+	&& chmod u+x /usr/bin/raxml
 
 WORKDIR /home/rstudio
