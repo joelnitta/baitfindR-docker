@@ -24,8 +24,7 @@ RUN apt-get update \
 		python-pip \
 	# Python libraries (for PASTA)
 	&& pip install DendroPy \
-	&& apt-get clean \
-	&& sudo cp /usr/bin/raxmlHPC /usr/bin/raxml
+	&& apt-get clean
 
 ##################
 ### R packages ###
