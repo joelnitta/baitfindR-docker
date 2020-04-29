@@ -86,18 +86,18 @@ Hash: e88df919a68845e664e019570e2251b6
 Package: baitfindR
 Source: github
 Version: 0.1.0
-Hash: 294b9a9f7f7d29e1c73aebda742635a9
+Hash: 022c6eb0b0b5dbe90093108d6e17c422
 Requires: ape, assertthat, bedr, checkr, digest, dplyr, fs, glue, here,
     ips, magrittr, pkgconfig, processx, purrr, readr, stringr
 GithubRepo: baitfindR
 GithubUsername: joelnitta
 GithubRef: master
-GithubSha1: 209a689d20ef081611f8e36963270d5e1f31c2ff
+GithubSha1: de73d9451115ad143da249e5ef2146bb929cd17b
 RemoteHost: api.github.com
 RemoteRepo: baitfindR
 RemoteUsername: joelnitta
 RemoteRef: master
-RemoteSha: 209a689d20ef081611f8e36963270d5e1f31c2ff
+RemoteSha: de73d9451115ad143da249e5ef2146bb929cd17b
 
 Package: base64enc
 Source: CRAN
@@ -446,7 +446,7 @@ Hash: 498643e765d1442ba7b1160a1df3abf9
 Package: phangorn
 Source: CRAN
 Version: 2.5.5
-Hash: 777b155774b848b4df52e7c337704560
+Hash: 6e43ef7d5f4b9028dcff8c88d5c579e5
 Requires: Rcpp, ape, fastmatch, igraph, magrittr, quadprog
 
 Package: pillar
@@ -454,6 +454,11 @@ Source: CRAN
 Version: 1.4.2
 Hash: 28ff1862b4e0c8761efca442e80a63d8
 Requires: cli, crayon, fansi, rlang, utf8, vctrs
+
+Package: pixmap
+Source: CRAN
+Version: 0.4-11
+Hash: 7fb7f9a871c381ec3a5b5799b4453faf
 
 Package: pkgbuild
 Source: CRAN
@@ -607,6 +612,11 @@ Source: CRAN
 Version: 3.6-1
 Hash: 3976cba9ccd480931d6fd1ae09680b77
 Requires: ade4, segmented
+
+Package: sp
+Source: CRAN
+Version: 1.4-1
+Hash: 26c48e048f5c25f602069fea2e8b70c5
 
 Package: storr
 Source: CRAN
